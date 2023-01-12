@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2019/11/22 15:52:47.000.946,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2019/11/22 15:52:48.000.289,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2020/03/17 14:32:01.000.326,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2020/03/17 14:32:01.000.186,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/03/17 14:33:11.000.685,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/03/17 14:33:11.000.732,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2020/03/17 14:33:15.000.654,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/03/17 14:33:15.000.685,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2020/03/17 14:34:01.000.654,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/03/17 14:34:01.000.747,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit2.cpp</Transaction>
+    <Transaction>2020/03/17 18:20:03.000.960,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>2020/03/17 18:20:04.000.038,=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2020/03/17 18:26:25.000.209,C:\Users\芳羽\Desktop\bingo\Unit1.dfm=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2020/03/17 18:26:25.000.209,C:\Users\芳羽\Desktop\bingo\Unit1.h=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>2020/03/17 18:26:25.000.209,C:\Users\芳羽\Desktop\bingo\Unit1.cpp=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2020/03/17 18:26:31.000.849,C:\Users\芳羽\Desktop\bingo\Project1.cbproj=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>2020/03/17 18:26:31.000.131,C:\Users\芳羽\Desktop\bingo\Project1PCH1.h=C:\Users\芳羽\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+  </Transactions>
+</BorlandProject>

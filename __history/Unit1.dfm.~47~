@@ -1,0 +1,143 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'bingo'
+  ClientHeight = 384
+  ClientWidth = 871
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 203
+    Top = 8
+    Width = 5
+    Height = 24
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -19
+    Font.Name = #24494#36575#27491#40657#39636
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 158
+    Top = 14
+    Width = 39
+    Height = 17
+    Caption = #30446#21069#26159
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = #24494#36575#27491#40657#39636
+    Font.Style = []
+    ParentFont = False
+  end
+  object Memo1: TMemo
+    Left = 679
+    Top = 8
+    Width = 232
+    Height = 161
+    Lines.Strings = (
+      'Memo1')
+    TabOrder = 0
+  end
+  object Memo2: TMemo
+    Left = 679
+    Top = 190
+    Width = 232
+    Height = 169
+    Lines.Strings = (
+      'Memo2')
+    TabOrder = 1
+  end
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 365
+    Width = 871
+    Height = 19
+    Panels = <>
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 8
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object MainMenu1: TMainMenu
+    Left = 224
+    Top = 48
+    object File1: TMenuItem
+      Caption = 'File'
+      object Listen1: TMenuItem
+        Caption = 'Listen'
+        OnClick = Listen1Click
+      end
+      object Connect1: TMenuItem
+        Caption = 'Connect'
+        OnClick = Connect1Click
+      end
+      object disconnect1: TMenuItem
+        Caption = 'disconnect'
+        OnClick = disconnect1Click
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+  end
+  object ServerSocket1: TServerSocket
+    Active = False
+    Port = 1024
+    ServerType = stNonBlocking
+    OnAccept = ServerSocket1Accept
+    OnClientConnect = ServerSocket1ClientConnect
+    OnClientDisconnect = ServerSocket1ClientDisconnect
+    OnClientRead = ServerSocket1ClientRead
+    OnClientError = ServerSocket1ClientError
+    Left = 240
+    Top = 152
+  end
+  object ClientSocket1: TClientSocket
+    Active = False
+    ClientType = ctNonBlocking
+    Port = 1024
+    OnConnect = ClientSocket1Connect
+    OnDisconnect = ClientSocket1Disconnect
+    OnRead = ClientSocket1Read
+    OnError = ClientSocket1Error
+    Left = 328
+    Top = 128
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 40
+    Top = 128
+  end
+  object Timer2: TTimer
+    OnTimer = Timer2Timer
+    Left = 104
+    Top = 136
+  end
+  object IdIPWatch1: TIdIPWatch
+    Active = False
+    HistoryFilename = 'iphist.dat'
+    Left = 184
+    Top = 128
+  end
+end

@@ -1,0 +1,111 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <IdBaseComponent.hpp>
+#include <IdComponent.hpp>
+#include <IdIPWatch.hpp>
+#include <System.Win.ScktComp.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.ComCtrls.hpp>
+
+
+typedef struct _PACKET
+	{
+	String ID;          // 4 bytes
+	String Host;        // unfixed length
+	String separation;  // 1 bytes ,"#"
+	String MainFunc;    // 1 bytes
+	String SubFunc;     //  bytes
+	int MsgLength;      // 3 bytes
+	String Msg;         // unfixed length
+	String EndSymbol;   // 1 bytes ,"@"
+	}PACKET,*pPACKET;
+
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TMainMenu *MainMenu1;
+	TMemo *Memo1;
+	TMemo *Memo2;
+	TServerSocket *ServerSocket1;
+	TClientSocket *ClientSocket1;
+	TTimer *Timer1;
+	TTimer *Timer2;
+	TIdIPWatch *IdIPWatch1;
+	TMenuItem *File1;
+	TMenuItem *Listen1;
+	TMenuItem *Connect1;
+	TMenuItem *disconnect1;
+	TMenuItem *N1;
+	TMenuItem *Exit1;
+	TStatusBar *StatusBar1;
+	TLabel *Label1;
+	TLabel *Label2;
+	TButton *Button1;
+	void __fastcall FormCreate(TObject *Sender);
+	void __fastcall Listen1Click(TObject *Sender);
+	void __fastcall Connect1Click(TObject *Sender);
+	void __fastcall disconnect1Click(TObject *Sender);
+	void __fastcall Timer1Timer(TObject *Sender);
+	void __fastcall ClientSocket1Connect(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall ClientSocket1Disconnect(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall ClientSocket1Read(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall Exit1Click(TObject *Sender);
+	void __fastcall ClientSocket1Error(TObject *Sender, TCustomWinSocket *Socket, TErrorEvent ErrorEvent,
+          int &ErrorCode);
+	void __fastcall ServerSocket1Accept(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall ServerSocket1ClientDisconnect(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall Timer2Timer(TObject *Sender);
+	void __fastcall ServerSocket1ClientError(TObject *Sender, TCustomWinSocket *Socket,
+          TErrorEvent ErrorEvent, int &ErrorCode);
+	void __fastcall ServerSocket1ClientRead(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall ServerSocket1ClientConnect(TObject *Sender, TCustomWinSocket *Socket);
+	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
+	void __fastcall Button1Click(TObject *Sender);
+
+
+
+
+
+
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+
+	void __fastcall cl(TObject *Sender);
+	TButton *buttons[5][5];//玩家按鈕
+	TButton *but[5][5];
+	int click1[5][5];//玩家按下
+	int num [25];//儲存玩家數值
+	int num2 [25];
+    String nbnb[25];
+	void rd();
+	void set();
+	void best();
+	void del();
+	void lineadd();
+	void win();
+	void wwin();
+    void start(String);
+	String AssemblePacket(PACKET pkg);
+	pPACKET DisassemblePacket(String);
+	void ParsePacket(pPACKET);
+	void ShowPacket(PACKET);
+	void ShowPacket(pPACKET);
+	void ReflashClientList();
+	bool CheckClients(TCustomWinSocket *);
+
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif
